@@ -4,14 +4,11 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    [SerializeField] private float cameraSpeed;
-    private float currentPosX;
-    private Vector3 velocity = Vector3.zero;
-
+    //[SerializeField] private float cameraSpeed;
     [SerializeField] private Transform player;
 
     private void Update(){
-        transform.position = new Vector3(player.position.x, player.position.y, player.position.z);
+        transform.position = new Vector3(player.position.x, player.position.y, transform.position.z);
     }
 
 
